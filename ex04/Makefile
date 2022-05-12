@@ -2,8 +2,6 @@ NAME = sed++
 
 SRC = main.cpp
 
-HDR =
-
 OBJ = $(SRC:.cpp=.o)
 
 CXX = c++
@@ -16,7 +14,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(LDFLAGS) -o $(NAME) $(OBJ)
 
-%.o: %.cpp $(HDR)
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 clean:
